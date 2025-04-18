@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Metadados essenciais -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Estilos externos -->
+    <link rel="stylesheet" href="estilo.css" />
+
+    <!-- Fontes externas do Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <!-- Título da página -->
+    <title>Dogos Breeds</title>
+  </head>
+
+  <body class="space-mono-regular">
+
+    <!-- Cabeçalho principal com título e navegação -->
+    <header>
+      <div class="header">
+        <h1>Dogos Breeds</h1>
+      </div>
+
+      <div class="header-right">
+        <ul>
+          <li><a href="#">Who we Are</a></li>
+          <li><a href="#">Find More</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main>
+
+      <!-- Área de busca por raças -->
+      <div class="search-container">
+        <input 
+          type="text" 
+          id="breedInput" 
+          list="racas" 
+          placeholder="Type the Breed..."
+        >
+        <datalist id="racas"></datalist>
+        <button id="searchButton">Search</button>
+      </div>
+
+      <!-- Contêiner dos cards de raças -->
+      <div id="dog-cards">
+        <!-- Cards serão inseridos dinamicamente via JavaScript -->
+      </div>
+      
+    </main>
+
+    <!-- Rodapé com direitos autorais -->
+    <footer>
+      <p>Todos os Direitos Reservados &copy;2025</p>
+    </footer>
+
+    <!-- Script principal do projeto -->
+    <script src="java.js"></script>
+
+  </body>
+</html>
