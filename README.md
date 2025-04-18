@@ -22,4 +22,4 @@ The project integrates The Dog API to fetch breed data, allowing users to search
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/lipe-1/thedogapi.git
+   git clone https://github.com/lohr-1/thedogapi.git
