@@ -1,19 +1,29 @@
+/* =====================================
+   Variáveis de Tema
+===================================== */
 :root {
-  --gray: #333;
+  --gray: #333; /* Cor padrão para bordas e textos */
 }
 
+/* =====================================
+   Reset Padrão
+===================================== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* =====================================
+   Estilo Base do Body
+===================================== */
 body {
   font-family: "Space Mono", monospace;
   font-weight: 400;
   background-color: #ffffff;
-  background-image: radial-gradient(#121215 0.5px, transparent 0.5px),
-                    radial-gradient(#0c0c0e 0.5px, #d8dada 0.5px);
+  background-image: 
+    radial-gradient(#121215 0.5px, transparent 0.5px),
+    radial-gradient(#0c0c0e 0.5px, #d8dada 0.5px);
   background-size: 20px 20px;
   background-position: 0 0, 10px 10px;
   opacity: 0.95;
@@ -22,7 +32,9 @@ body {
   min-height: 100vh;
 }
 
-/* Header */
+/* =====================================
+   Header - Cabeçalho Principal
+===================================== */
 header {
   width: 100%;
   padding: 20px 40px;
@@ -34,6 +46,7 @@ header {
   backdrop-filter: blur(6px);
 }
 
+/* Seção do título no Header */
 .header {
   flex: 1;
 }
@@ -43,6 +56,7 @@ header {
   letter-spacing: 4px;
 }
 
+/* Navegação do Header */
 .header-right {
   display: flex;
   gap: 30px;
@@ -69,12 +83,15 @@ header {
   color: #666;
 }
 
+/* Redefinição global para títulos h1 */
 h1 {
   font-size: 2rem;
   letter-spacing: 4px;
 }
 
-/* Main */
+/* =====================================
+   Main - Conteúdo Principal
+===================================== */
 main {
   width: 100%;
   max-width: 1100px;
@@ -82,7 +99,9 @@ main {
   padding: 0 20px 40px;
 }
 
-/* Barra de Busca */
+/* =====================================
+   Search Container - Barra de Busca
+===================================== */
 .search-container {
   display: flex;
   flex-wrap: wrap;
@@ -100,6 +119,7 @@ main {
   max-width: 40%;
 }
 
+/* Estilo do campo de busca */
 .search-container input {
   padding: 12px 20px;
   border-radius: 999px;
@@ -121,6 +141,7 @@ main {
   background-color: #f0f0f0;
 }
 
+/* Estilo do botão de busca */
 .search-container button {
   padding: 12px 20px;
   border-radius: 999px;
@@ -139,6 +160,9 @@ main {
   color: #000;
 }
 
+/* =====================================
+   Cards dos Cachorros
+===================================== */
 #dog-cards {
   display: flex;
   flex-wrap: nowrap;
@@ -147,14 +171,16 @@ main {
   overflow-y: visible;
   scroll-behavior: smooth;
   padding: 20px;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
 }
 
+/* Remove a barra de rolagem no Chrome/Safari */
 #dog-cards::-webkit-scrollbar {
   display: none;
 }
 
+/* Estilo individual dos cards */
 .dog-card {
   border: 1px solid rgba(255, 255, 255, 0.2);
   flex: 0 0 auto;
@@ -164,20 +190,22 @@ main {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   padding: 20px;
   text-align: left;
   color: #010101;
+  transform: perspective(1000px) rotateX(var(--rotateX, 0deg)) rotateY(var(--rotateY, 0deg));
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   transform-style: preserve-3d;
 }
 
+/* Efeito de hover nos cards */
 .dog-card:hover {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
   transform: rotateY(var(--rotateY, 0deg)) rotateX(var(--rotateX, 0deg));
 }
 
+/* Imagens dentro dos cards */
 .dog-card img {
   width: 100%;
   height: 250px;
@@ -186,7 +214,7 @@ main {
   margin-bottom: 0px;
 }
 
-/* Caso não tenha imagem */
+/* Estilo do card quando não há imagem */
 .no-image {
   width: 100%;
   height: 200px;
@@ -200,7 +228,9 @@ main {
   margin-bottom: 10px;
 }
 
-/* Footer */
+/* =====================================
+   Footer - Rodapé
+===================================== */
 footer {
   margin-top: auto;
   padding: 20px;
